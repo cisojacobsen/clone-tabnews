@@ -1,0 +1,198 @@
+Git
+- Repositórios Git são como pastas com os arquivos do projeto
+
+GitHub
+- Hospeda repositórios Git
+- Distribuir/Compartilhar repositórios
+- Possibilita que outras pessoas contribuam com o projeto
+
+Funções Básicas de um Ambiente de Desenvolvimento:
+- Um Local para Escrever código
+- Um Local para Executar esse código
+
+Codespaces (Editor Cloud):
+- Editor de código online VSCOde
+- Terminal Linux
+
+Tecnologias que já vem com Codespaces:
+- Node.js: ambiente de execução JavaScript
+- npm (Node Package Manager): gerenciador de pacotes do Node.js
+- Docker: plataforma de containerização que permite empacotar
+aplicações e suas dependências em containers leves e portáteis.
+
+NVM (Node Version Manager): ferramenta de linha de comando que permite
+instalar, gerenciar e alternar entre diferentes versões do Node.js no mesmo sistema operacional.
+.nvmrc é um arquivo especial do nvm, onde o 'rc' significa 'Run Commands'.
+Esse 'rc' é uma convenção criada para script que possuem instruções de inicialização.
+Exemplos: .bashrc, .vimrc, .npmrc
+
+[Terminal - Aula Dia 3 - nvm e Node.js]
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ node -v
+    v22.17.0
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ nvm ls
+        v20.19.3
+        v22.17.0
+    ->       system
+    default -> 22 (-> v22.17.0)
+    iojs -> N/A (default)
+    unstable -> N/A (default)
+    node -> stable (-> v22.17.0) (default)
+    stable -> 22.17 (-> v22.17.0) (default)
+    lts/* -> lts/jod (-> v22.17.0)
+    lts/argon -> v4.9.1 (-> N/A)
+    lts/boron -> v6.17.1 (-> N/A)
+    lts/carbon -> v8.17.0 (-> N/A)
+    lts/dubnium -> v10.24.1 (-> N/A)
+    lts/erbium -> v12.22.12 (-> N/A)
+    lts/fermium -> v14.21.3 (-> N/A)
+    lts/gallium -> v16.20.2 (-> N/A)
+    lts/hydrogen -> v18.20.8 (-> N/A)
+    lts/iron -> v20.19.3
+    lts/jod -> v22.17.0
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ nvm install lts/hydrogen
+    Downloading and installing node v18.20.8...
+    Downloading https://nodejs.org/dist/v18.20.8/node-v18.20.8-linux-x64.tar.xz...
+    ##################################################################################################### 100.0%
+    Computing checksum with sha256sum
+    Checksums matched!
+    Now using node v18.20.8 (npm v10.8.2)
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ nvm alias default lts/hydrogen 
+    default -> lts/hydrogen (-> v18.20.8)
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ node -v
+    v18.20.8
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ nvm install
+    Found '/workspaces/clone-tabnews/.nvmrc' with version <lts/hydrogen>
+    v18.20.8 is already installed.
+    Now using node v18.20.8 (npm v10.8.2)
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ 
+[/TERMINAL]
+
+##############################################
+# REACT E NEXT.JS
+
+React: biblioteca JavaScript de código aberto para construir
+interfaces de usuário, especialmente para aplicações web.
+
+Next.js: framework React de código aberto desenvolvido pela Vercel
+que facilita a criação de aplicações web modernas e performáticas.
+
+npm: gerenciador de pacotes do Node.js
+
+package.json: é um arquivo de manifesto onde estão listados metadados do projeto (autor, descrição), scripts pelo npm (ex. npm run dev) e as dependências do projeto como versões específicas do Next.js e React.
+
+package-lock.json: arquivo de manifesto especial sobre as dependências principais (instaladas) e as sub-dependência.
+
+[TERMINAL - Aula Next.js e React]
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ npm init
+    This utility will walk you through creating a package.json file.
+    It only covers the most common items, and tries to guess sensible defaults.
+
+    See `npm help init` for definitive documentation on these fields
+    and exactly what they do.
+
+    Use `npm install <pkg>` afterwards to install a package and
+    save it as a dependency in the package.json file.
+
+    Press ^C at any time to quit.
+    package name: (clone-tabnews) 
+    version: (1.0.0) 
+    git repository: 
+    keywords: 
+    author: 
+    license: (MIT) MIT
+    About to write to /workspaces/clone-tabnews/package.json:
+
+    {
+    "name": "clone-tabnews",
+    "version": "1.0.0",
+    "description": "Clone do tabnews para prática de programação com o curso.dev",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "next": "^13.1.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {}
+    }
+
+
+    Is this OK? (yes) 
+
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ npm install next@13.1.6
+
+    up to date, audited 19 packages in 4s
+
+    3 packages are looking for funding
+    run `npm fund` for details
+
+    2 vulnerabilities (1 moderate, 1 critical)
+
+    To address all issues (including breaking changes), run:
+    npm audit fix --force
+
+    Run `npm audit` for details.
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ npm install react@18.2.0
+
+    up to date, audited 19 packages in 1s
+
+    3 packages are looking for funding
+    run `npm fund` for details
+
+    2 vulnerabilities (1 moderate, 1 critical)
+
+    To address all issues (including breaking changes), run:
+    npm audit fix --force
+
+    Run `npm audit` for details.
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $ npm install react-dom@18.2.0
+
+    up to date, audited 19 packages in 2s
+
+    3 packages are looking for funding
+    run `npm fund` for details
+
+    2 vulnerabilities (1 moderate, 1 critical)
+
+    To address all issues (including breaking changes), run:
+    npm audit fix --force
+
+    Run `npm audit` for details.
+    @cisojacobsen ➜ /workspaces/clone-tabnews (main) $
+[/TERMINAL]
+
+##############################################
+# PROTOCOLOS
+
+Protocolo: acordo que segue regras conhecidas entre as duas partes que estão tentando se comunicar, e que define como uma conversa inicia, como ela se desenvolve e finaliza.
+
+##############################################
+# DIA 5
+
+Sistema de Versinamento Git, Diffs, Commit
+
+Para ver o histórico de commits:
+
+$ git log
+
+Para sair do git log, :q
+
+blob: no Git, um blob (Binary Large Object) é um tipo de objeto fundamental que armazena o conteúdo de arquivos no repositório. Quando você adiciona um arquivo ao Git, ele cria um blob para armazenar exatamente o conteúdo desse arquivo.
+
+deploy =  implantar
+Deploy (ou deployment) é o processo de disponibilizar uma aplicação ou sistema para uso em um ambiente específico, geralmente o ambiente de produção onde os usuários finais poderão acessá-la.
+O deploy é uma etapa crítica no desenvolvimento porque é quando o código sai do ambiente controlado de desenvolvimento e vai para o "mundo real", onde precisa funcionar de forma estável e acessível para os usuários.
+
+Fluxo de Desenvolvimento:
+1. Desenvolver a implementação na cópia local do repositório (ambiente local de desenvolvimento);
+2. Push da implementação para o repositório de origem (origin/main);
+3. Deploy automatizado da implementação para o servidor de produção.
+
+Relação client <-> server, onde:
+-> client é a entidade que solicita/requisita algo;
+-> server é a entidade que serve algo;
+# a mesma entidade pode ser considerada client ou server, dependendo da situação.
