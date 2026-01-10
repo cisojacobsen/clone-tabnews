@@ -209,10 +209,18 @@ interfaces são as bordas de uma aplicação, é onde o usuário encosta para us
 ----------------------------
 
 Comandos:
+git add .
+git add -A
+git status
+git commit -m 'descrição do commit'
+git push
+git pull
+
+-----------
 Jeste
   npm run test:watch
 
-
+----------
 CURL
   curl http://endereco -> mostra apenas o body do response
   curl http://endereco -v -> -v ou --verbose irá mostra toda a resposta (response) 
