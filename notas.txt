@@ -196,3 +196,26 @@ Relação client <-> server, onde:
 -> client é a entidade que solicita/requisita algo;
 -> server é a entidade que serve algo;
 # a mesma entidade pode ser considerada client ou server, dependendo da situação.
+
+####################################################
+
+API - Aplication Programming interfaces (Interface de Programação de Aplicações)
+Tudo com que se interage é uma interface! Pois abstrai como aquilo funciona.
+
+interfaces são as bordas de uma aplicação, é onde o usuário encosta para usar o sistema.
+
+
+
+----------------------------
+
+Comandos:
+Jeste
+  npm run test:watch
+
+
+CURL
+  curl http://endereco -> mostra apenas o body do response
+  curl http://endereco -v -> -v ou --verbose irá mostra toda a resposta (response) 
+
+  criar um arquivo com o resultado do comando
+  curl http://localhost:300/api/status -v -o response.txt 2>verbose.txt
