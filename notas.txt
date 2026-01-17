@@ -204,7 +204,10 @@ Tudo com que se interage é uma interface! Pois abstrai como aquilo funciona.
 
 interfaces são as bordas de uma aplicação, é onde o usuário encosta para usar o sistema.
 
-
+####################################################
+Banco de Dados
+Docker - Para subir banco de dados local
+Docker Compose
 
 ----------------------------
 
@@ -227,3 +230,6 @@ CURL
 
   criar um arquivo com o resultado do comando
   curl http://localhost:300/api/status -v -o response.txt 2>verbose.txt
+
+----------
+Banco de Dados
