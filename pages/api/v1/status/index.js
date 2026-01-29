@@ -1,6 +1,10 @@
+import database from "../../../../infra/database.js";
+
 // O nome status da função não é a mesma coisa que o método .status
 // apesar de ter o mesmo nome, são coisas diferentes
-function status(request, response) {
+async function status(request, response) {
+  const result = await database.query("SELECT 1 + 1 AS SUM;");
+  console.log(result.rows);
   response.status(200).json({ chave: "valor" });
 }
 

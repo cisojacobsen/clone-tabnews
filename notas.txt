@@ -209,6 +209,18 @@ Banco de Dados
 Docker - Para subir banco de dados local
 Docker Compose
 
+docker --version
+docker-compose --version
+
+docker compose up (Create and start containers)
+docker compose down (Stop and remove containers, networks)
+docker compose -f infra/compose.yaml up (--file, especifica o local do arquivo)
+docker compose up -d (--detach, Run containers in the background)
+docker ps -a (ps, mosta lista de processos do docker; --all, mostra todos)
+psql (client do postgress)
+psql --host=localhost --username=postgres --port=5432 (used to initiate a connection to a local PostgreSQL database server using the command-line interface psql. )
+docker compose up -d --force-recreate (recriar todos os contêineres, independentemente de as imagens terem sido alteradas ou não.)
+
 ----------------------------
 
 Comandos:
@@ -220,8 +232,10 @@ git push
 git pull
 
 -----------
+TESTE AUTOMATIZADOS
 Jeste
-  npm run test:watch
+  npm run test:watch (vai rodas teste apenas de arquivos alterado recentemente)
+  npm run test:watchAll (Todos os testes)
 
 ----------
 CURL
@@ -232,4 +246,4 @@ CURL
   curl http://localhost:300/api/status -v -o response.txt 2>verbose.txt
 
 ----------
-Banco de Dados
+
