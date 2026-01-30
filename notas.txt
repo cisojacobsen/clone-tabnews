@@ -247,3 +247,5 @@ CURL
 
 ----------
 
+Codespaces
+code arquivo.extensao -> cria uma arquivo na raiz do projeto
