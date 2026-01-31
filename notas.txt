@@ -237,6 +237,8 @@ Jeste
   npm run test:watch (vai rodas teste apenas de arquivos alterado recentemente)
   npm run test:watchAll (Todos os testes)
 
+  npm run test:watch (foi criado um atalho onde esse comando roda o watchAll. veja scripts do package.json)
+
 ----------
 CURL
   curl http://endereco -> mostra apenas o body do response
@@ -247,5 +249,9 @@ CURL
 
 ----------
 
-Codespaces
+VS Code
 code arquivo.extensao -> cria uma arquivo na raiz do projeto
+
+-------------
+Atalhos no Package.json scripts
+"dev": "npm run services:up && next dev" (roda o comandos do banco e validando isso, roda o servidor web)
